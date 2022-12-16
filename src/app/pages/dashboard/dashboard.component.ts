@@ -23,7 +23,8 @@ export class DashboardComponent implements OnInit {
           buttonText: 'Share',
         },
       ],
-      footer: 'This is footer',
+      footer:
+        '<div style="color: red; text-align: center">This is footer</div>',
     },
     {
       header: {

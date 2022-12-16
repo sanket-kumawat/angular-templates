@@ -6,9 +6,10 @@
   <mat-card-content *ngIf="cardConfig.content" [innerHtml]="cardConfig.content">
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary" *ngFor="let action of cardConfig.actions" (click)="performAction(action)">{{action.buttonText}}
+    <button mat-raised-button color="primary" *ngFor="let action of cardConfig.actions" (click)="performAction(action)">
+      {{action.buttonText}}
     </button>
   </mat-card-actions>
-  <mat-card-footer *ngIf="cardConfig.footer" [innerHtml]="cardConfig.footer">
+  <mat-card-footer *ngIf="cardConfig.footer" [innerHtml]="cardConfig.footer | safeHtml">
   </mat-card-footer>
 </mat-card>
