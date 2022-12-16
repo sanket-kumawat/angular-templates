@@ -1,0 +1,11 @@
+.card-wrapper {
+  padding: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .card {
+    width: 400px;
+  }
+}

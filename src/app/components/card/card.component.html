@@ -1,0 +1,14 @@
+<mat-card class="example-card">
+  <mat-card-header *ngIf="cardConfig.header">
+    <mat-card-title *ngIf="cardConfig.header.title" [innerHtml]="cardConfig.header.title"></mat-card-title>
+    <mat-card-subtitle *ngIf="cardConfig.header.subtitle" [innerHtml]="cardConfig.header.subtitle"></mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content *ngIf="cardConfig.content" [innerHtml]="cardConfig.content">
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" *ngFor="let action of cardConfig.actions" (click)="performAction(action)">{{action.buttonText}}
+    </button>
+  </mat-card-actions>
+  <mat-card-footer *ngIf="cardConfig.footer" [innerHtml]="cardConfig.footer">
+  </mat-card-footer>
+</mat-card>
